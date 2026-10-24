@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#224c3e">
+<meta name="description" content="Aktiviti pemahaman interaktif Tahun 3: Pengembaraan Sang Kancil dan Sahabat. Lima soalan, petikan cerita, semakan jawapan dan muzik.">
+<title>Jom Fahami Cerita · Sang Kancil dan Sahabat</title>
+<style>
+:root{color-scheme:light;--green:#224c3e;--deep:#183e32;--leaf:#55825c;--mint:#eaf0df;--paper:#fffdf6;--cream:#f4f1e5;--ink:#243e33;--muted:#637369;--line:#dce3d5;--gold:#e7bb66;--coral:#bb6950;--good:#256347;--good-bg:#e9f4e9;--try:#8e552d;--try-bg:#fff2e1;--shadow:0 18px 54px #2443320d}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:"Trebuchet MS","Segoe UI",Arial,sans-serif;font-size:18px;line-height:1.55;min-height:100vh;background-image:radial-gradient(ellipse at 8% 55%,#dfe8d155,transparent 48%),radial-gradient(ellipse at 93% 10%,#f7e6bd55,transparent 35%)}button,input,textarea{font:inherit}button,a,input,textarea{-webkit-tap-highlight-color:transparent}button{cursor:pointer}button:disabled{cursor:default;opacity:.45}button,a,input,textarea{outline-offset:4px}button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible,summary:focus-visible{outline:3px solid #b87f28}button{touch-action:manipulation}a{color:var(--green)}[hidden]{display:none!important}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}.icon{width:23px;height:23px;display:inline-block;vertical-align:middle;flex:none;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}.sprite{position:absolute;width:0;height:0;overflow:hidden;pointer-events:none}
+.topbar{background:var(--green);color:#fffbed;padding:18px 28px;box-shadow:0 2px 0 #183e3218}.topbar-inner{max-width:1240px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{display:flex;gap:12px;align-items:center;font-size:19px;font-weight:800;letter-spacing:-.3px}.brand-mark{background:#d8e5c6;color:var(--green);width:41px;height:41px;border-radius:13px;display:grid;place-items:center}.brand-mark .icon{width:27px;height:27px}.brand small{display:block;font-size:11px;font-weight:400;letter-spacing:1.6px;text-transform:uppercase;color:#d9e7cf;margin-top:-3px}.audio-controls{display:flex;align-items:center;gap:8px}.audio-btn{border:1px solid #ffffff35;background:#ffffff09;border-radius:99px;color:inherit;min-height:42px;padding:7px 13px;display:flex;align-items:center;justify-content:center;gap:7px;font-size:13px;font-weight:700;white-space:nowrap}.audio-btn:hover{background:#ffffff17}.audio-btn[aria-pressed="true"]{background:#e9c984;color:#284733;border-color:#e9c984}.volume-wrap{display:flex;align-items:center;gap:5px;padding:0 7px;color:#dfe9d6}.volume-wrap .icon{width:19px;height:19px}input[type=range]{width:75px;accent-color:#eac781;cursor:pointer}
+.shell{max-width:1240px;margin:35px auto 0;padding:0 28px 20px}.breadcrumb{display:flex;gap:8px;align-items:center;margin:0 0 20px;font-size:13px;font-weight:700;color:var(--muted)}.breadcrumb .dot{width:5px;height:5px;border-radius:50%;background:#c39a51;margin:0 6px}.layout{display:grid;grid-template-columns:330px minmax(0,1fr);gap:29px;align-items:start}.side-card{border:1px solid #d9e1cb;background:linear-gradient(145deg,#e6eddb,#edf0de);border-radius:26px;overflow:hidden;position:sticky;top:22px}.scene-top{padding:25px 25px 0}.eyebrow{font-size:11px;font-weight:800;letter-spacing:2.2px;color:#62754f;display:flex;align-items:center;gap:7px;text-transform:uppercase}.eyebrow .icon{width:16px;height:16px}.side-card h2{font-family:Georgia,"Times New Roman",serif;font-size:29px;line-height:1.2;letter-spacing:-.5px;margin:12px 0 0;color:var(--green);font-weight:500}.forest-scene{display:block;width:100%;height:auto;margin-top:4px}.forest-scene .paper-foot{fill:#c7b28e;stroke:#faf4dc;stroke-width:3}.forest-scene .brow,.forest-scene .smile-extra,.forest-scene .food{display:none}.forest-scene .tree-sway{transform-origin:155px 150px;animation:tree-sway 8s ease-in-out infinite alternate}.forest-scene .bird{animation:bird-drift 9s ease-in-out infinite alternate}.side-bottom{padding:0 25px 25px}.journey{list-style:none;margin:0;padding:0;display:grid;gap:9px}.journey li{display:flex;align-items:center;gap:10px;font-size:13px;color:#6b775d}.step-num{border:1px solid #bac8a6;width:25px;height:25px;display:grid;place-items:center;border-radius:50%;font-size:12px;flex:none;background:#ffffff4d}.journey li.current{color:var(--green);font-weight:800}.journey li.current .step-num{background:var(--green);color:#fffbed;border-color:var(--green)}.journey li.done .step-num{background:#d1dfbd;color:#325a3b;border-color:#c2d1aa}.side-tip{margin:18px 0 0;padding-top:15px;border-top:1px solid #cfd9bd;font-size:12px;color:#687558;line-height:1.7}.side-tip strong{color:#35543c}.worksheet{background:var(--paper);border:1px solid #e1e4d7;border-radius:26px;box-shadow:var(--shadow);min-height:625px;overflow:hidden}.pane{padding:34px 38px}.badge{display:inline-flex;align-items:center;gap:7px;color:#6a7957;background:#edf1e2;border:1px solid #dde5ce;border-radius:99px;font-size:12px;font-weight:800;padding:6px 11px;letter-spacing:.2px}.badge .icon{width:15px;height:15px}.welcome-title{font-family:Georgia,"Times New Roman",serif;font-weight:500;font-size:54px;letter-spacing:-2px;line-height:1.07;color:var(--green);margin:22px 0 12px}.welcome-title em{color:var(--coral);font-weight:500}.welcome-subtitle{font-size:20px;font-weight:700;line-height:1.45;margin:0 0 15px;max-width:520px}.welcome-lede{font-size:16px;color:var(--muted);max-width:510px;margin:0 0 22px}.welcome-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:22px}.welcome-step{border:1px solid var(--line);border-radius:15px;padding:14px 12px;background:#fcfcf4}.welcome-step .icon{color:#72915b;width:24px;height:24px;margin-bottom:6px}.welcome-step b{display:block;font-size:14px}.welcome-step small{display:block;color:var(--muted);font-size:12px;line-height:1.5;margin-top:4px}.instruction-note{font-size:14px;line-height:1.75;border-left:3px solid var(--gold);padding-left:15px;margin:0 0 22px;color:#58674f}.primary,.secondary,.text-button{border:0;min-height:48px;border-radius:13px;padding:12px 20px;display:inline-flex;gap:9px;align-items:center;justify-content:center;font-weight:800;font-size:15px;line-height:1.35;text-decoration:none}.primary{background:var(--green);color:#fffced;box-shadow:0 3px 0 var(--deep)}.primary:hover:not(:disabled){background:#315f49;transform:translateY(-1px)}.primary:active:not(:disabled){transform:translateY(2px);box-shadow:none}.primary .icon{width:20px;height:20px}.secondary{background:#eef1e4;color:var(--green);border:1px solid #d8e0cb;box-shadow:none}.secondary:hover:not(:disabled){background:#e5ebd7}.text-button{min-height:42px;background:transparent;color:var(--green);padding:8px 12px;font-size:13px;text-decoration:underline;text-underline-offset:4px}.welcome-actions{display:flex;align-items:center;gap:12px;flex-wrap:wrap}.start-note{margin:15px 0 0;color:#81906e;font-size:12px;display:flex;align-items:center;gap:6px}.start-note .icon{width:15px;height:15px}
+.quiz-top{display:flex;align-items:center;justify-content:space-between;gap:12px;font-size:12px;color:var(--muted);font-weight:700}.quiz-top-label{letter-spacing:1.3px;text-transform:uppercase}.score-chip{color:#517646;background:#edf3e4;border-radius:99px;padding:4px 10px;white-space:nowrap}.progress-track{height:5px;background:#e9ecdf;border-radius:99px;overflow:hidden;margin:16px 0 26px}.progress-fill{height:100%;background:var(--gold);border-radius:99px;transition:width .3s}.question-index{font-size:12px;letter-spacing:1.2px;text-transform:uppercase;color:#8a7750;font-weight:800;margin-bottom:10px}.question-title{font-size:29px;font-weight:800;line-height:1.35;letter-spacing:-.65px;margin:0 0 21px;color:var(--green)}.question-title:focus{outline:0}.reference-box{background:#f8f3e2;border:1px solid #e8dec1;border-radius:15px;padding:14px 16px;margin-bottom:18px}.ref-main{display:flex;align-items:flex-start;gap:11px}.ref-main>.icon{color:#9a7c43;margin-top:2px;width:22px;height:22px}.ref-copy{flex:1;min-width:0}.ref-label{font-size:13px;display:block;font-weight:800;color:#79613a}.ref-titles{font-size:12px;line-height:1.6;color:#827353;margin-top:2px}.read-toggle{background:transparent;border:0;color:#866635;font-size:12px;font-weight:800;min-height:38px;padding:8px 0 0;display:flex;align-items:center;gap:7px;text-align:left}.read-toggle .icon{width:16px;height:16px;transition:transform .2s}.read-toggle[aria-expanded=true] .icon{transform:rotate(180deg)}.reading-panel{border-top:1px solid #e4d9b8;margin-top:13px;padding-top:16px;max-height:440px;overflow:auto;overscroll-behavior:contain}.story-page+.story-page{margin-top:23px;padding-top:18px;border-top:1px dashed #d4c69f}.page-stamp{font-size:11px;letter-spacing:1px;text-transform:uppercase;color:#997849;margin:0 0 5px;font-weight:800}.story-page h3{font-family:Georgia,serif;font-size:23px;line-height:1.3;margin:0 0 12px;color:#4e613d;font-weight:500}.story-page p{font-size:18px;line-height:1.7;margin:0 0 9px;color:#45513d}.story-page strong{color:#955742;background:#f0e3c9;padding:0 3px;border-radius:3px}.glossary{background:#fffaf0aa;padding:10px 12px;border-radius:10px;font-size:13px;line-height:1.7;color:#776443;margin-top:12px}.close-reading{display:flex;justify-content:flex-end}.close-reading button{font-size:12px}.answer-label{font-size:14px;display:block;font-weight:800;margin-bottom:3px}.answer-help{font-size:12px;color:#7b8672;display:block;margin-bottom:9px}.answer-input{display:block;resize:vertical;min-height:112px;width:100%;padding:15px 16px;border:1.5px solid #ccd6c5;background:#fffef9;border-radius:14px;color:var(--ink);font-size:18px;line-height:1.6;transition:border .2s,box-shadow .2s}.answer-input::placeholder{color:#a1aa96}.answer-input:focus{border-color:#648763;box-shadow:0 0 0 3px #759e6420;outline:none}.answer-input[aria-invalid=true]{border-color:#bb8a53}.check-row{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:12px}.check-hint{font-size:11px;color:#849077}.check-button{padding:11px 16px;min-height:45px;font-size:14px}.feedback{padding:14px 16px;border:1px solid transparent;border-radius:14px;margin-top:17px;display:flex;align-items:flex-start;gap:11px;animation:appear .2s ease-out}.feedback.correct{background:var(--good-bg);color:var(--good);border-color:#cfe2ca}.feedback.wrong{background:var(--try-bg);color:var(--try);border-color:#ead7b9}.feedback.empty{background:#f1f3ea;color:#5e7052;border-color:#dce3d2}.feedback>.icon{width:23px;height:23px;margin-top:1px}.feedback b{display:block;font-size:14px;line-height:1.5}.feedback p{margin:4px 0 0;font-size:12px;line-height:1.65}.example-toggle{margin-top:8px;padding-left:0;color:#927143;font-size:12px}.example-answer{border:1px dashed #cecda9;background:#f7f7e9;padding:13px 15px;border-radius:12px;margin-top:5px}.example-answer b{font-size:12px;color:#7e7144;display:block;margin-bottom:4px}.example-answer p{margin:0;font-size:15px}.quiz-nav{display:flex;justify-content:space-between;align-items:center;gap:12px;border-top:1px solid #e7e9dc;margin-top:25px;padding-top:20px}.quiz-nav .secondary{font-size:14px;min-height:45px;padding:10px 14px}.quiz-nav .primary{min-height:45px;padding:10px 17px;font-size:14px}.quiz-nav .icon{width:18px;height:18px}.nav-help{font-size:11px;color:#8b927f;line-height:1.5;text-align:right;margin:9px 0 0}
+.summary-title{font-family:Georgia,serif;font-size:39px;line-height:1.2;font-weight:500;letter-spacing:-1px;color:var(--green);margin:18px 0 10px}.summary-lede{font-size:15px;line-height:1.65;color:var(--muted);margin:0 0 20px}.summary-score{display:flex;align-items:center;gap:18px;padding:18px;background:#eef3e5;border:1px solid #dce6cf;border-radius:18px;margin-bottom:22px}.score-circle{width:77px;height:77px;background:#fffdf5;border:5px solid #d8b66a;border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--green);font-size:25px;font-weight:800;flex:none}.score-circle small{font-size:13px;color:#869071}.summary-score b{display:block;font-size:16px}.summary-score p{margin:3px 0 0;font-size:12px;color:#6f7c60}.answer-summary{display:grid;gap:12px;margin-bottom:23px}.summary-item{border:1px solid var(--line);border-radius:15px;padding:15px;background:#fffef8}.summary-item-head{display:flex;justify-content:space-between;align-items:center;gap:10px;font-size:12px;font-weight:800;color:#738064}.status-tag{font-size:11px;border-radius:99px;padding:3px 8px;background:var(--good-bg);color:var(--good)}.status-tag.try{background:var(--try-bg);color:var(--try)}.summary-student{font-size:15px;line-height:1.6;margin:9px 0 7px;overflow-wrap:anywhere}.summary-model{font-size:12px;color:#6a785f;line-height:1.7;border-top:1px dashed #e1e5d5;padding-top:8px;margin:7px 0}.summary-review{background:none;border:0;padding:3px 0;color:#58764f;text-decoration:underline;text-underline-offset:3px;font-size:11px;min-height:30px}.footer{display:flex;justify-content:space-between;align-items:center;gap:14px;padding:23px 2px 10px;color:#8b927d;font-size:11px;line-height:1.6}.footer a{color:#738365;text-underline-offset:3px}.footer .icon{width:13px;height:13px}.audio-status{color:#8e6d3f;font-size:12px;margin:0 0 12px}
+.side-card,.worksheet{min-width:0}
+@keyframes appear{from{transform:translateY(3px);opacity:0}to{transform:translateY(0);opacity:1}}@keyframes tree-sway{to{transform:rotate(1.8deg)}}@keyframes bird-drift{to{transform:translate(9px,-3px)}}
+@media(min-width:1350px){.shell{margin-top:42px}.worksheet{min-height:660px}.pane{padding:38px 43px}.side-card h2{font-size:31px}}
+@media(max-width:1000px){.layout{grid-template-columns:260px minmax(0,1fr);gap:21px}.side-card h2{font-size:25px}.scene-top{padding:22px 20px 0}.side-bottom{padding:0 20px 22px}.pane{padding:28px}.welcome-title{font-size:46px}.welcome-step{padding:12px 9px}.question-title{font-size:26px}.brand{font-size:17px}.volume-wrap input{width:55px}.audio-btn{font-size:12px;padding:7px 10px}}
+@media(max-width:760px){.topbar{padding:14px 19px}.topbar-inner{align-items:center;gap:12px;flex-wrap:wrap}.brand{font-size:17px}.brand-mark{width:35px;height:35px;border-radius:11px}.brand small{font-size:10px}.audio-controls{margin-left:auto}.audio-btn{min-height:38px;font-size:11px;padding:6px 9px;gap:5px}.audio-btn .icon{width:18px;height:18px}.volume-wrap{padding:0 2px}.volume-wrap input{width:55px}.volume-wrap .icon{display:none}.shell{padding:0 18px 15px;margin-top:22px}.breadcrumb{margin-bottom:14px;font-size:11px}.layout{grid-template-columns:1fr;gap:17px}.side-card{position:relative;top:0;display:grid;grid-template-columns:1fr 170px;min-height:145px;max-height:160px}.scene-top{padding:22px 22px 12px}.side-card h2{font-size:25px;max-width:310px;margin-top:9px}.forest-scene{grid-column:2;grid-row:1/3;width:190px;align-self:end;margin:0 0 -7px -12px}.side-bottom{padding:0 22px 18px}.journey{display:none}.side-tip{margin:0;padding:0;border:0;font-size:11px}.side-tip span{display:none}.eyebrow{font-size:10px}.worksheet{min-height:0;border-radius:22px}.pane{padding:26px}.welcome-title{font-size:48px;margin-top:18px}.welcome-subtitle{font-size:19px}.welcome-lede{font-size:15px}.footer{padding-top:18px;align-items:flex-start}.question-title{font-size:26px}.summary-title{font-size:35px}}
+@media(max-width:480px){.topbar-inner{gap:12px}.brand{font-size:16px}.audio-controls{width:100%;margin:0;justify-content:space-between}.audio-btn{font-size:12px;flex:1}.volume-wrap{flex:.7;justify-content:center}.volume-wrap input{width:75px}.shell{padding:0 13px;margin-top:17px}.side-card{grid-template-columns:1fr 130px;min-height:137px;max-height:147px;border-radius:20px}.scene-top{padding:18px 17px 8px}.side-card h2{font-size:23px;max-width:220px}.forest-scene{width:165px;margin-left:-25px}.side-bottom{padding:0 17px 16px}.side-tip{font-size:10px}.pane{padding:23px 20px}.welcome-title{font-size:43px;letter-spacing:-1.8px}.welcome-subtitle{font-size:18px}.welcome-steps{gap:7px}.welcome-step{padding:11px 9px}.welcome-step b{font-size:12px}.welcome-step small{font-size:11px}.instruction-note{font-size:13px}.question-title{font-size:24px;letter-spacing:-.4px;margin-bottom:18px}.quiz-top{font-size:10px}.score-chip{font-size:10px;padding:4px 7px}.question-index{font-size:11px}.progress-track{margin:14px 0 23px}.reference-box{padding:12px}.ref-main{gap:8px}.ref-titles{font-size:11px}.ref-label{font-size:12px}.read-toggle{font-size:12px}.answer-input{font-size:17px;padding:13px;min-height:108px}.check-hint{display:none}.check-row{justify-content:flex-end}.check-button{width:100%}.feedback{padding:12px;gap:8px}.quiz-nav{margin-top:21px;padding-top:17px}.quiz-nav .primary,.quiz-nav .secondary{font-size:12px;padding:10px 12px}.footer{font-size:10px;gap:15px}.footer>span{max-width:160px}.summary-title{font-size:32px}.summary-score{gap:13px;padding:14px}.summary-score b{font-size:14px}.summary-score p{font-size:11px}.score-circle{width:67px;height:67px;font-size:23px}.story-page p{font-size:18px}.reading-panel{max-height:390px}}
+@media(max-width:360px){.audio-controls{gap:6px}.audio-btn{font-size:11px;padding:6px 7px;min-width:0}.volume-wrap{flex:0 0 52px}.volume-wrap input{width:52px}.side-card{grid-template-columns:minmax(0,1fr) 110px}.forest-scene{width:146px;margin-left:-24px}.side-card h2{font-size:21px}.scene-top{padding-left:15px;padding-right:12px}.eyebrow{font-size:9px;letter-spacing:1.6px}.pane{padding:22px 17px}.question-title{font-size:22px}.quiz-top{font-size:9px}.welcome-title{font-size:38px}.footer>span{max-width:135px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+@media print{.topbar,.side-card,.quiz-nav,.footer,.check-row,.reference-box,.welcome-actions,.summary-review{display:none!important}.shell{padding:0;margin:0;max-width:none}.layout{display:block}.worksheet{border:0;box-shadow:none}.pane{padding:0}.summary-item{break-inside:avoid}body{background:#fff}}
+</style>
+</head>
+<body>
+<svg class="sprite" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><defs>
+<symbol id="i-leaf" viewBox="0 0 24 24"><path d="M20 3C9 2 3 6 4 13c1 7 12 8 15 1 1-3 1-7 1-11Z"/><path d="M4 21 16 8M8 16v-5M12 12h5"/></symbol>
+<symbol id="i-book" viewBox="0 0 24 24"><path d="M12 5v16M12 5C8 2 5 3 2 4v15c4-2 7-1 10 2 3-3 6-4 10-2V4c-3-1-6-2-10 1Z"/><path d="M5 8c2-1 3 0 4 0M15 8c1 0 2-1 4 0M5 12c2-1 3 0 4 0M15 12c1 0 2-1 4 0"/></symbol>
+<symbol id="i-music" viewBox="0 0 24 24"><path d="M9 18V5l11-2v13M9 9l11-2"/><ellipse cx="6" cy="18" rx="3" ry="3"/><ellipse cx="17" cy="16" rx="3" ry="3"/></symbol>
+<symbol id="i-volume" viewBox="0 0 24 24"><path d="m11 4-6 5H2v6h3l6 5ZM15 8c3 2 3 6 0 8M18 5c5 4 5 10 0 14"/></symbol>
+<symbol id="i-mute" viewBox="0 0 24 24"><path d="m11 4-6 5H2v6h3l6 5ZM16 9l6 6M22 9l-6 6"/></symbol>
+<symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h15m-6-6 6 6-6 6"/></symbol>
+<symbol id="i-back" viewBox="0 0 24 24"><path d="M20 12H5m6-6-6 6 6 6"/></symbol>
+<symbol id="i-check" viewBox="0 0 24 24"><path d="m6 12 4 4 8-9"/><circle cx="12" cy="12" r="10"/></symbol>
+<symbol id="i-retry" viewBox="0 0 24 24"><path d="M4 10a8 8 0 1 1 1 8M4 10V4m0 6h6"/></symbol>
+<symbol id="i-chevron" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+<symbol id="i-pencil" viewBox="0 0 24 24"><path d="m14 5 5 5M4 20l5-1L21 7a2 2 0 0 0 0-3l-1-1a2 2 0 0 0-3 0L5 15ZM4 20l1-5 4 4"/></symbol>
+<symbol id="i-star" viewBox="0 0 24 24"><path d="m12 2 3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1Z"/></symbol>
+<symbol id="i-think" viewBox="0 0 24 24"><path d="M9 18h6m-6 3h6M8 14C1 8 7 1 12 2c7 0 9 8 4 12l-1 4H9ZM10 9c0-3 5-3 4 0l-2 2m0 3v.1"/></symbol>
+<symbol id="char-kancil" viewBox="0 0 180 180"><path class="paper-foot" d="M31 171L54 157H125L153 171Z"/><path d="M54 157H125L113 168H42Z" fill="#f1dfba"/><g class="animal-body"><path d="M47 133L43 159L56 162L66 131M93 135L96 163L109 163L110 128M113 127L120 157L131 156L129 121" fill="#ba8051" stroke="#fffaf0" stroke-width="4.5" stroke-linejoin="round"/><path d="M48 156L57 156V164H45ZM96 158H109V166H96M120 152H132V161H120" fill="#65503e"/><ellipse cx="84" cy="118" rx="46" ry="31" fill="#c8945e" stroke="#fffaf0" stroke-width="4.5" stroke-linejoin="round"/><path d="M40 112Q29 108 34 96Q43 96 47 104" fill="#cf9f69" stroke="#fffaf0" stroke-width="4.5" stroke-linejoin="round"/><path d="M93 112Q97 93 110 86L128 96Q132 129 115 136Q101 135 93 112" fill="#e8cfa4"/><circle cx="55" cy="107" r="3" fill="#f6dfb8"/><circle cx="70" cy="104" r="3" fill="#f6dfb8"/><circle cx="82" cy="109" r="3" fill="#f6dfb8"/></g><g class="head-part"><path d="M89 44Q64 12 80 5Q99 7 103 42M116 42Q121 5 138 12Q148 31 126 52" fill="#c5905c" stroke="#fffaf0" stroke-width="4.5" stroke-linejoin="round"/><path d="M83 16Q78 19 95 37M130 22Q135 28 124 39" stroke="#e7b39a" stroke-width="6" stroke-linecap="round"/><path d="M81 67Q77 41 103 40Q132 39 140 64L149 86Q145 105 118 105Q96 103 91 88Z" fill="#d6a36c" stroke="#fffaf0" stroke-width="4.5" stroke-linejoin="round"/><path d="M121 82Q141 74 149 86Q153 105 123 106Q108 99 115 90" fill="#eed3ac"/><ellipse cx="147" cy="85" rx="6" ry="4" fill="#584034"/><ellipse cx="106" cy="67" rx="4.4" ry="5.5" fill="#413a2e"/><circle cx="107" cy="65" r="1.6" fill="#fffaf0"/><ellipse cx="131" cy="67" rx="4.4" ry="5.5" fill="#413a2e"/><circle cx="132" cy="65" r="1.6" fill="#fffaf0"/><path d="M125 93Q131 98 137 92" stroke="#6b4b36" stroke-width="2.5" fill="none" stroke-linecap="round"/><ellipse cx="96" cy="83" rx="7" ry="4" fill="#dcab8c"/><path class="brow" d="M102 57L112 60M128 60L138 57" stroke="#6b4b36" stroke-width="3"/><path class="smile-extra" d="M123 93Q130 103 138 93" stroke="#6b4b36" stroke-width="3" fill="none"/></g></symbol>
+<symbol id="char-rabbit" viewBox="0 0 180 180"><path class="paper-foot" d="M31 171L54 157H125L153 171Z"/><path d="M54 157H125L113 168H42Z" fill="#f1dfba"/><g class="animal-body"><ellipse cx="88" cy="132" rx="32" ry="33" fill="#fffcf5" stroke="#fffaf0" stroke-width="4.5" stroke-linejoin="round"/><ellipse cx="52" cy="139" rx="14" ry="13" fill="#f8f3e8" stroke="#fffaf0" stroke-width="4.5" stroke-linejoin="round"/><ellipse cx="67" cy="157" rx="22" ry="12" fill="#fffdf7" stroke="#fffaf0" stroke-width="4.5" stroke-linejoin="round"/><ellipse cx="111" cy="157" rx="22" ry="12" fill="#fffdf7" stroke="#fffaf0" stroke-width="4.5" stroke-linejoin="round"/><ellipse cx="89" cy="133" rx="19" ry="22" fill="#f0e8d7"/><path class="belly-hand" d="M63 120Q79 126 84 141Q76 151 65 136M116 120Q105 126 98 140Q107 150 118 137" fill="#fffdf8" stroke="#ddcfb6" stroke-width="2.5"/></g><g class="head-part"><path d="M66 64Q43 3 64 3Q82 6 80 59M94 59Q99 -5 117 5Q133 23 109 72" fill="#fffcf5" stroke="#fffaf0" stroke-width="4.5" stroke-linejoin="round"/><path d="M64 15Q58 23 70 50M113 17Q118 28 103 53" stroke="#ebc1bd" stroke-width="9" stroke-linecap="round"/><ellipse cx="88" cy="86" rx="42" ry="35" fill="#fffdf7" stroke="#fffaf0" stroke-width="4.5" stroke-linejoin="round"/><path d="M64 93Q77 84 88 94Q104 83 115 94L112 108Q88 126 65 108Z" fill="#faf0de"/><ellipse cx="72" cy="81" rx="4.4" ry="5.5" fill="#413a2e"/><circle cx="73" cy="79" r="1.6" fill="#fffaf0"/><ellipse cx="106" cy="81" rx="4.4" ry="5.5" fill="#413a2e"/><circle cx="107" cy="79" r="1.6" fill="#fffaf0"/><path d="M82 95Q89 88 95 95L88 101Z" fill="#c88f91"/><path d="M88 101V105M88 105Q77 115 72 106M88 105Q98 115 105 106" fill="none" stroke="#8c7460" stroke-width="2" stroke-linecap="round"/><ellipse cx="59" cy="96" rx="7" ry="4.5" fill="#efd1c6"/><ellipse cx="117" cy="96" rx="7" ry="4.5" fill="#efd1c6"/><path class="smile-extra" d="M79 108Q88 119 98 108" stroke="#a88e6c" stroke-width="2" fill="none"/></g></symbol>
+<symbol id="char-monkey" viewBox="0 0 180 180"><path class="paper-foot" d="M31 171L54 157H125L153 171Z"/><path d="M54 157H125L113 168H42Z" fill="#f1dfba"/><path d="M55 140Q11 147 14 112Q14 89 32 97Q43 105 32 114" fill="none" stroke="#fffaf0" stroke-width="17" stroke-linecap="round"/><path d="M55 140Q11 147 14 112Q14 89 32 97Q43 105 32 114" fill="none" stroke="#a57247" stroke-width="10" stroke-linecap="round"/><g class="animal-body"><path d="M68 130L62 158L79 161L87 140M98 137L101 160L118 160L113 129" fill="#9d6a41" stroke="#fffaf0" stroke-width="4.5" stroke-linejoin="round"/><ellipse cx="71" cy="162" rx="16" ry="8" fill="#c59a6b" stroke="#fffaf0" stroke-width="4.5" stroke-linejoin="round"/><ellipse cx="111" cy="162" rx="16" ry="8" fill="#c59a6b" stroke="#fffaf0" stroke-width="4.5" stroke-linejoin="round"/><ellipse cx="92" cy="124" rx="34" ry="34" fill="#a77548" stroke="#fffaf0" stroke-width="4.5" stroke-linejoin="round"/><ellipse cx="93" cy="125" rx="22" ry="24" fill="#dab787"/><path d="M66 111Q48 122 56 137L66 139" fill="none" stroke="#fffaf0" stroke-width="16" stroke-linecap="round"/><path d="M66 111Q48 122 56 137L66 139" fill="none" stroke="#a77548" stroke-width="9" stroke-linecap="round"/><g class="wave-arm"><path d="M115 108Q139 109 146 83" fill="none" stroke="#fffaf0" stroke-width="18" stroke-linecap="round"/><path d="M115 108Q139 109 146 83" fill="none" stroke="#a77548" stroke-width="11" stroke-linecap="round"/><path d="M139 85L139 72M144 84L145 66M149 84L152 70M153 85L159 78" stroke="#fffaf0" stroke-width="8" stroke-linecap="round"/><path d="M139 85L139 72M144 84L145 66M149 84L152 70M153 85L159 78" stroke="#d5ad7b" stroke-width="4" stroke-linecap="round"/></g></g><g class="head-part"><circle cx="54" cy="62" r="18" fill="#a77548" stroke="#fffaf0" stroke-width="4.5" stroke-linejoin="round"/><circle cx="132" cy="62" r="18" fill="#a77548" stroke="#fffaf0" stroke-width="4.5" stroke-linejoin="round"/><circle cx="54" cy="62" r="10" fill="#d9b58a"/><circle cx="132" cy="62" r="10" fill="#d9b58a"/><path d="M59 67Q56 24 90 25L99 15L108 28Q137 34 130 73Q126 103 94 106Q62 101 59 67" fill="#a77548" stroke="#fffaf0" stroke-width="4.5" stroke-linejoin="round"/><path d="M66 60Q67 41 81 46L93 54L104 46Q124 40 124 63L124 83Q118 102 94 103Q70 101 65 80Z" fill="#e1bf91"/><ellipse cx="79" cy="65" rx="4.4" ry="5.5" fill="#413a2e"/><circle cx="80" cy="63" r="1.6" fill="#fffaf0"/><ellipse cx="111" cy="65" rx="4.4" ry="5.5" fill="#413a2e"/><circle cx="112" cy="63" r="1.6" fill="#fffaf0"/><ellipse cx="95" cy="80" rx="6" ry="4" fill="#805b42"/><path d="M79 87Q96 104 113 87" fill="#fff9e9" stroke="#805b42" stroke-width="2.5" stroke-linecap="round"/><ellipse cx="68" cy="81" rx="6" ry="4" fill="#d89f81"/><ellipse cx="122" cy="81" rx="6" ry="4" fill="#d89f81"/></g></symbol>
+<symbol id="char-fox" viewBox="0 0 180 180"><path class="paper-foot" d="M31 171L54 157H125L153 171Z"/><path d="M54 157H125L113 168H42Z" fill="#f1dfba"/><path d="M106 131Q135 83 160 96L166 86L170 104L176 108L169 124L169 137L157 137Q140 161 107 151Z" fill="#8d8376" stroke="#fffaf0" stroke-width="4.5" stroke-linejoin="round"/><path d="M156 101L166 91L170 105L176 109L169 123L169 136L157 136L146 133L151 120L146 110Z" fill="#e7ddc6"/><g class="animal-body"><path d="M52 130L46 160L59 163L70 135M92 133L97 162L112 162L107 125" fill="#8c7a64" stroke="#fffaf0" stroke-width="4.5" stroke-linejoin="round"/><path d="M47 159H60V166H44M96 158H113V166H96" fill="#5d5549"/><ellipse cx="85" cy="121" rx="42" ry="30" fill="#a29583" stroke="#fffaf0" stroke-width="4.5" stroke-linejoin="round"/><path d="M60 100Q80 88 95 106L94 127Q74 133 60 100" fill="#d5c4a8"/></g><g class="head-part"><path d="M54 50L53 17L76 40M94 37L113 16L115 53" fill="#8b7b68" stroke="#fffaf0" stroke-width="4.5" stroke-linejoin="round"/><path d="M58 26L61 42L71 41M109 26L100 42L111 44" fill="#cda593"/><path d="M50 65Q44 43 80 37Q117 38 121 65L134 83L109 103L77 100L50 87Z" fill="#a49786" stroke="#fffaf0" stroke-width="4.5" stroke-linejoin="round"/><path d="M50 80L74 68L91 87L106 72L134 83L113 104L76 102Z" fill="#eee1c8"/><ellipse cx="66" cy="64" rx="4.4" ry="5.5" fill="#413a2e"/><circle cx="67" cy="62" r="1.6" fill="#fffaf0"/><ellipse cx="104" cy="64" rx="4.4" ry="5.5" fill="#413a2e"/><circle cx="105" cy="62" r="1.6" fill="#fffaf0"/><path d="M85 82L99 82L93 91Z" fill="#5d5145"/><path d="M92 91Q95 100 104 95" stroke="#74614c" stroke-width="2.5" fill="none" stroke-linecap="round"/><path class="smile-extra" d="M83 94Q96 105 109 93" stroke="#74614c" stroke-width="2.5" fill="none"/></g></symbol>
+</defs></svg>
+<header class="topbar"><div class="topbar-inner">
+<div class="brand"><span class="brand-mark"><svg class="icon" aria-hidden="true"><use href="#i-leaf"/></svg></span><span>Rimba Ceria<small>Belajar bersama sahabat</small></span></div>
+<div class="audio-controls" role="group" aria-label="Kawalan audio">
+<button type="button" id="music-button" class="audio-btn" aria-pressed="true" title="Hidupkan atau hentikan muzik latar"><svg class="icon" aria-hidden="true"><use href="#i-music"/></svg><span id="music-label">Muzik hidup</span></button>
+<label class="volume-wrap"><svg class="icon" aria-hidden="true"><use href="#i-volume"/></svg><span class="sr-only">Kelantangan audio</span><input id="volume" type="range" min="0" max="100" value="45" aria-label="Kelantangan audio"></label>
+<button type="button" id="mute-button" class="audio-btn" aria-pressed="false" title="Matikan atau hidupkan semua bunyi"><svg class="icon" aria-hidden="true"><use id="mute-icon" href="#i-volume"/></svg><span id="mute-label">Senyapkan</span></button>
+</div></div></header>
+<div class="shell">
+<div class="breadcrumb"><span>Bahasa Melayu</span><span class="dot" aria-hidden="true"></span><span>Tahun 3</span><span class="dot" aria-hidden="true"></span><span>Pemahaman</span></div>
+<p class="audio-status" id="audio-status" role="status" hidden></p>
+<div class="layout">
+<aside class="side-card" aria-label="Pengembaraan bersama Sang Kancil">
+<div class="scene-top"><div class="eyebrow"><svg class="icon" aria-hidden="true"><use href="#i-leaf"/></svg>Pengembaraan bermakna</div><h2>Setiap cerita ada pengajaran.</h2></div>
+<svg class="forest-scene" viewBox="0 0 360 310" role="img" aria-labelledby="forest-title">
+<title id="forest-title">Sang Kancil, Sang Arnab, Sang Monyet dan Sang Musang bersahabat di hutan berhampiran sungai.</title>
+<defs><linearGradient id="river" x1="0" x2="1" y2=".8"><stop stop-color="#b3d7cf"/><stop offset="1" stop-color="#7eb7b8"/></linearGradient><linearGradient id="hill" x2="0" y2="1"><stop stop-color="#cadbac"/><stop offset="1" stop-color="#b1c592"/></linearGradient></defs>
+<circle cx="252" cy="71" r="25" fill="#f3d58b"/><circle cx="252" cy="71" r="36" fill="#efcf80" opacity=".12"/>
+<path d="M22 176Q87 104 165 161q77-53 176 15v95H22Z" fill="#d6e2c1"/>
+<path d="M0 220q81-65 179-23 100-42 181 10v76H0Z" fill="url(#hill)"/>
+<path d="M281 184q-43 41-13 59 25 17-13 29-26 17 46 29h59v-99Z" fill="url(#river)" stroke="#edf1df" stroke-width="3"/>
+<path d="M283 215h21m-17 43h24m7 26h25" stroke="#edf6e6" stroke-width="3" stroke-linecap="round"/>
+<g class="tree-sway"><path d="M45 216 51 89h15l6 127Z" fill="#b6976d"/><path d="m56 156-25-35m30 12 31-29" stroke="#b6976d" stroke-width="9" stroke-linecap="round"/><path d="M20 127C-5 102 9 84 21 80 10 48 36 43 47 49 58 21 85 36 85 48c31-6 40 14 31 34 25 17 12 42-7 44-14 30-44 18-50 15-13 12-30 4-39-14Z" fill="#a1bd83" stroke="#f2f3df" stroke-width="3"/><path d="M26 82q-12-24 8-25 10-3 16 4-19 9-15 28Z" fill="#c9dcab"/><path d="M80 74q37-8 30 19-5 11-21 12 9-17-9-31Z" fill="#8baa6f"/></g>
+<g><path d="m307 203 5-104h12l4 104Z" fill="#b59a74"/><path d="m316 144 24-25" stroke="#b59a74" stroke-width="8"/><path d="M282 121q-21-23 0-39-2-24 21-24 18-23 37-1 27-2 29 22 21 18 0 37-1 26-28 24-30 16-41-7-10 3-18-12Z" fill="#b4c99a" stroke="#f1f2de" stroke-width="3"/><path d="M300 78q12-20 30-5-5 17-22 18Z" fill="#d1dfb3"/></g>
+<path class="bird" d="M152 67q7-7 13 0 6-7 13 0m-61 37q6-6 12 0 6-6 12 0" fill="none" stroke="#8b9e7a" stroke-width="2" stroke-linecap="round"/>
+<ellipse cx="166" cy="270" rx="140" ry="16" fill="#8eaa741e"/>
+<use href="#char-kancil" x="27" y="158" width="103" height="112"/><use href="#char-rabbit" x="109" y="180" width="82" height="99"/><use href="#char-monkey" x="169" y="152" width="106" height="118"/><use href="#char-fox" x="254" y="182" width="95" height="99"/>
+<g fill="#7f9a63"><path d="m30 273 3-12 4 10 5-7-2 11m181 5 3-13 4 11 5-8-1 12"/></g>
+<g transform="translate(15 258)"><path d="M4 18V1" stroke="#8aa16d" stroke-width="2"/><g fill="#d9987d" stroke="#faf3da" stroke-width="1"><circle cx="4" cy="0" r="4"/><circle cx="0" cy="4" r="4"/><circle cx="8" cy="4" r="4"/><circle cx="4" cy="8" r="4"/></g><circle cx="4" cy="4" r="3" fill="#eecf7e"/></g>
+<g transform="translate(336 273)"><path d="M4 18V1" stroke="#8aa16d" stroke-width="2"/><g fill="#dcb96c" stroke="#faf3da" stroke-width="1"><circle cx="4" cy="0" r="4"/><circle cx="0" cy="4" r="4"/><circle cx="8" cy="4" r="4"/><circle cx="4" cy="8" r="4"/></g><circle cx="4" cy="4" r="3" fill="#f5e9ab"/></g>
+</svg>
+<div class="side-bottom"><ol class="journey" id="journey"><li><span class="step-num">1</span>Kenali tempat</li><li><span class="step-num">2</span>Fahami masalah</li><li><span class="step-num">3</span>Dengar nasihat</li><li><span class="step-num">4</span>Lihat tindakan</li><li><span class="step-num">5</span>Ambil pengajaran</li></ol><p class="side-tip"><strong>Baca. Fikir. Jawab.</strong><span><br>Ambil masa kamu. Sahabat sentiasa membantu.</span></p></div>
+</aside>
+<main class="worksheet" id="main">
+<section id="welcome" class="pane" aria-labelledby="welcome-title">
+<span class="badge"><svg class="icon" aria-hidden="true"><use href="#i-book"/></svg>5 soalan · 6 halaman cerita</span>
+<h1 class="welcome-title" id="welcome-title">Jom Fahami<br><em>Cerita.</em></h1>
+<p class="welcome-subtitle">Pengembaraan Sang Kancil<br>dan Sahabat</p>
+<p class="welcome-lede">Ikuti pengembaraan di Rimba Ceria. Baca cerita dan pelajari pengajarannya bersama sahabat!</p>
+<div class="welcome-steps"><div class="welcome-step"><svg class="icon" aria-hidden="true"><use href="#i-book"/></svg><b>1. Baca</b><small>Rujuk halaman cerita.</small></div><div class="welcome-step"><svg class="icon" aria-hidden="true"><use href="#i-think"/></svg><b>2. Fikir</b><small>Cari isi yang sesuai.</small></div><div class="welcome-step"><svg class="icon" aria-hidden="true"><use href="#i-pencil"/></svg><b>3. Jawab</b><small>Taip dan semak terus.</small></div></div>
+<p class="instruction-note">Baca soalan dengan teliti. Rujuk muka surat buku cerita yang dinyatakan untuk membantu kamu mencari jawapan. Taip jawapan kamu, kemudian tekan “Semak Jawapan”.</p>
+<div class="welcome-actions"><button id="start-button" type="button" class="primary"><span id="start-label">Mula Aktiviti</span><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></button><button id="reset-welcome" type="button" class="text-button" hidden>Mula semula</button></div>
+<p class="start-note"><svg class="icon" aria-hidden="true"><use href="#i-music"/></svg>Muzik bermula selepas kamu memulakan aktiviti.</p>
+</section>
+<section id="quiz" class="pane" aria-labelledby="question-title" hidden>
+<div class="quiz-top"><span class="quiz-top-label">Jom uji kefahaman</span><span id="score-chip" class="score-chip">0 daripada 5 tepat</span></div>
+<div id="progress" class="progress-track" role="progressbar" aria-label="Kemajuan soalan" aria-valuemin="0" aria-valuemax="5" aria-valuenow="1"><div id="progress-fill" class="progress-fill"></div></div>
+<div id="question-index" class="question-index">Soalan 1 daripada 5</div>
+<h1 id="question-title" class="question-title" tabindex="-1"></h1>
+<div class="reference-box"><div class="ref-main"><svg class="icon" aria-hidden="true"><use href="#i-book"/></svg><div class="ref-copy"><span id="ref-label" class="ref-label"></span><div id="ref-titles" class="ref-titles"></div><button type="button" class="read-toggle" id="read-toggle" aria-controls="reading-panel" aria-expanded="false"><span id="read-label">Baca Halaman Cerita</span><svg class="icon" aria-hidden="true"><use href="#i-chevron"/></svg></button></div></div><section id="reading-panel" class="reading-panel" aria-label="Halaman buku cerita" hidden><div id="reading-content"></div><div class="close-reading"><button type="button" class="text-button" id="close-reading">Tutup bacaan</button></div></section></div>
+<form id="answer-form" novalidate>
+<label class="answer-label" for="answer-input">Jawapan kamu</label><span id="answer-help" class="answer-help">Tulis jawapan ringkas dengan isi yang jelas.</span>
+<textarea id="answer-input" class="answer-input" rows="3" maxlength="700" placeholder="Taip jawapan kamu di sini…" autocomplete="off" spellcheck="true" aria-describedby="answer-help feedback" aria-invalid="false"></textarea>
+<div class="check-row"><span class="check-hint">Keputusan dipaparkan selepas butang ditekan.</span><button type="button" class="primary check-button" id="check-button"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Semak Jawapan</button></div>
+</form>
+<div id="feedback" class="feedback" role="status" aria-live="polite" aria-atomic="true" tabindex="-1" hidden><svg class="icon" aria-hidden="true"><use id="feedback-icon" href="#i-check"/></svg><div><b id="feedback-title"></b><p id="feedback-detail"></p></div></div>
+<button type="button" id="example-toggle" class="text-button example-toggle" aria-controls="example-answer" aria-expanded="false" hidden>Lihat Contoh Jawapan</button><div id="example-answer" class="example-answer" hidden><b>Contoh jawapan</b><p id="example-text"></p></div>
+<nav class="quiz-nav" aria-label="Navigasi soalan"><button type="button" id="back-button" class="secondary"><svg class="icon" aria-hidden="true"><use href="#i-back"/></svg>Kembali</button><button type="button" id="next-button" class="primary" disabled><span id="next-label">Seterusnya</span><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></button></nav><p class="nav-help" id="nav-help">Semak jawapan untuk meneruskan aktiviti.</p>
+</section>
+<section id="summary" class="pane" aria-labelledby="summary-title" hidden>
+<span class="badge"><svg class="icon" aria-hidden="true"><use href="#i-star"/></svg>Pengembaraan selesai</span><h1 class="summary-title" id="summary-title" tabindex="-1">Syabas kerana<br>menyelesaikan aktiviti!</h1><p class="summary-lede">Setiap jawapan ialah peluang untuk belajar. Mari lihat hasil pengembaraan kamu.</p>
+<div class="summary-score"><div class="score-circle"><span id="summary-count">0</span><small> / 5</small></div><div><b id="summary-score-title">Jawapan tepat</b><p id="summary-score-message"></p></div></div>
+<div class="answer-summary" id="answer-summary"></div><div class="welcome-actions"><button type="button" class="primary" id="retry-button"><svg class="icon" aria-hidden="true"><use href="#i-retry"/></svg>Cuba Semula</button><button type="button" class="secondary" id="review-button">Semak Semula</button></div>
+</section>
+<noscript><p style="padding:24px">Sila aktifkan JavaScript dalam pelayar untuk menggunakan semakan jawapan, panel bacaan dan audio.</p></noscript>
+</main></div>
+<footer class="footer"><span>Belajar dengan tenang, ceria dan yakin.</span><a href="https://g-ipgp2022022310040-droid.github.io/Pengembaraan-sang-kancil-1/" target="_blank" rel="noopener noreferrer">Buka buku cerita asal ↗</a></footer>
+</div>
+<script>
+(function(){
+"use strict";
+var STORAGE_KEY="jom-fahami-cerita-v1";
+var SOURCE="https://g-ipgp2022022310040-droid.github.io/Pengembaraan-sang-kancil-1/";
+var BOOK=[
+ {title:"Persahabatan di Hutan",paragraphs:["Pada suatu pagi, Sang Kancil dan Sang Arnab berjalan di hutan.","Mereka ingin makan angin di tepi sungai.","Sang Monyet pula sibuk bercakap kerana dia banyak mulut.","Mereka ketawa melihatnya."],idioms:{"makan angin":"bersiar-siar","banyak mulut":"suka bercakap banyak"}},
+ {title:"Bekal Hilang",paragraphs:["Tiba-tiba, bekal makanan mereka hilang.","Sang Arnab terpaksa ikat perut walaupun lapar.","Sang Kancil berat hati untuk meneruskan perjalanan.","Namun, mereka tetap mencari bekal itu."],idioms:{"ikat perut":"menahan lapar","berat hati":"keberatan untuk melakukan sesuatu"}},
+ {title:"Sang Monyet Tebal Muka",paragraphs:["Sang Monyet datang meminta makanan daripada kawan-kawannya.","Dia tebal muka walaupun sudah meminta berkali-kali.","Sang Kancil menasihatinya supaya tidak terlalu meminta.","Sang Monyet berjanji untuk berubah."],idioms:{"tebal muka":"tidak tahu malu"}},
+ {title:"Sang Musang Panjang Tangan",paragraphs:["Mereka ternampak Sang Musang berhampiran pokok besar.","Rupanya, Sang Musang yang panjang tangan telah mengambil bekal mereka.","Sang Kancil meminta Sang Musang memulangkan bekal itu.","Sang Musang berasa malu lalu meminta maaf."],idioms:{"panjang tangan":"suka mencuri atau mengambil barang orang lain tanpa izin"}},
+ {title:"Pengajaran di Tepi Sungai",paragraphs:["Sang Musang memulangkan semua bekal kepada mereka.","Sang Arnab berasa gembira kerana bekal mereka dipulangkan semula.","Sang Monyet mengakui bahawa sikapnya boleh menyusahkan kawan.","Mereka bersetuju untuk menjaga barang dan saling membantu."],idioms:{}},
+ {title:"Pengembaraan yang Bermakna",paragraphs:["Selepas makan, mereka berehat di tepi sungai.","Sang Kancil berasa gembira untuk meneruskan perjalanan.","Mereka menikmati masa bersama sambil melihat keindahan hutan.","Sejak hari itu, semua haiwan belajar menghargai persahabatan."],idioms:{}}
+];
+var QUESTIONS=[
+ {text:"Ke manakah Sang Kancil dan Sang Arnab ingin pergi untuk bersiar-siar?",pages:[1],model:"Sang Kancil dan Sang Arnab ingin pergi ke tepi sungai.",hint:"Cari tempat Sang Kancil dan Sang Arnab ingin makan angin."},
+ {text:"Mengapakah Sang Arnab terpaksa menahan lapar?",pages:[2],model:"Sang Arnab terpaksa menahan lapar kerana bekal makanan mereka hilang.",hint:"Fikirkan perkara yang berlaku kepada bekal makanan mereka."},
+ {text:"Apakah nasihat yang diberikan oleh Sang Kancil kepada Sang Monyet?",pages:[3],model:"Sang Kancil menasihati Sang Monyet supaya tidak terlalu kerap meminta makanan daripada kawan-kawannya.",hint:"Baca nasihat Sang Kancil tentang sikap Sang Monyet yang sering meminta makanan."},
+ {text:"Apakah tindakan Sang Musang selepas Sang Kancil memintanya memulangkan bekal makanan?",pages:[4,5],model:"Sang Musang meminta maaf dan memulangkan bekal makanan mereka.",hint:"Baca tindakan Sang Musang pada akhir muka surat 4 dan awal muka surat 5."},
+ {text:"Apakah pengajaran yang dapat kamu peroleh daripada cerita ini?",pages:[5,6],model:"Kita hendaklah saling membantu dan menghargai persahabatan.",hint:"Nyatakan satu sikap baik yang patut kita amalkan berdasarkan cerita."}
+];
+function normalize(value){
+ return String(value||"").normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase().replace(/[-–—]/g,"").replace(/[^\p{L}\p{N}\s]/gu," ").replace(/\bjgn\b/g,"jangan").replace(/\btdk\b/g,"tidak").replace(/\btak\b/g,"tidak").replace(/\btakde\b|\btakda\b/g,"tiada").replace(/\s+/g," ").trim();
+}
+function distance(a,b){
+ if(a===b)return 0;if(Math.abs(a.length-b.length)>2)return 3;
+ var row=Array.from({length:b.length+1},function(_,i){return i;});
+ for(var i=1;i<=a.length;i++){var previous=row[0];row[0]=i;var min=i;for(var j=1;j<=b.length;j++){var old=row[j];row[j]=Math.min(row[j]+1,row[j-1]+1,previous+(a[i-1]===b[j-1]?0:1));previous=old;min=Math.min(min,row[j]);}if(min>2)return 3;}return row[b.length];
+}
+function matches(token,words){
+ return words.some(function(word){if(token===word)return true;var allowed=word.length>=9?2:word.length>=4?1:0;return allowed>0&&Math.abs(token.length-word.length)<=allowed&&distance(token,word)<=allowed;});
+}
+function positions(tokens,words){var out=[];tokens.forEach(function(token,i){if(matches(token,words))out.push(i);});return out;}
+function has(tokens,words){return positions(tokens,words).length>0;}
+var NEG=["tidak","bukan","belum","enggan","jangan","usah","tanpa"];
+function negativeCount(tokens,index,span){
+ var count=0;
+ for(var i=Math.max(0,index-(span||7));i<index;i++){
+  if(NEG.indexOf(tokens[i])<0)continue;
+  if((tokens[i]==="bukan"&&tokens[i+1]==="sahaja")||(tokens[i]==="tidak"&&tokens[i+1]==="hanya")||(tokens[i]==="tidak"&&tokens[i+1]==="jauh"))continue;
+  count++;
+ }
+ return count;
+}
+function negated(tokens,index,span){return negativeCount(tokens,index,span)%2===1;}
+function clauses(value){
+ return String(value||"").toLowerCase().split(/[.!?;,\n]+|\b(?:tetapi|namun|tapi|sebaliknya|melainkan|dan|lalu|kemudian)\b/g).map(normalize).filter(Boolean).map(function(c){return c.split(" ");});
+}
+var FOOD=["bekal","bekalnya","bekalan","bekalku","makanan","makanannya","bekalmereka","bakul"];
+var FRIEND=["sahabat","sahabatnya","rakan","rakanrakan","kawan","kawankawan","kawannya","persahabatan"];
+var REQUEST=["minta","meminta","memintanya","memohon","memohonkan","memintaminta"];
+var RETURN=["memulangkan","pulangkan","mengembalikan","kembalikan","memulang","dipulangkan"];
+var TAKE=["mengambil","diambil","ambil","mencuri","dicuri","curi"];
+function wrongActor(tokens,actionIndex){
+ var before=tokens.slice(0,actionIndex).join(" ");
+ return /^(?:kerana |sebab |oleh )?(?:sang )?(?:arnab|kancil|monyet)(?:\s|$)/.test(before)&&!has(tokens.slice(0,actionIndex),["musang"])&&!/\bkepada\b/.test(before);
+}
+function restriction(tokens){
+ var asks=positions(tokens,REQUEST);
+ return asks.some(function(i){
+  var from=Math.max(0,i-8),before=tokens.slice(from,i);
+  var stops=positions(before,["kurangkan","mengurangkan","kurang","elakkan","mengelakkan","hindari","berhenti","hentikan","menghentikan"]);
+  if(stops.length){var stopIndex=from+stops[stops.length-1];return !negated(tokens,stopIndex,5);}
+  if(negated(tokens,i,8))return true;
+  return has(tokens,["berpada","berpadapada","berpada-pada","bersederhana"]);
+ });
+}
+function gradeAnswer(index,value){
+ var text=normalize(value),parts=clauses(value);if(!text)return false;
+ if(index===0)return parts.some(function(t){return positions(t,["sungai","sungainya"]).some(function(i){
+  var tail=t.slice(i+1,i+5).join(" ");
+  return !negated(t,i,7)&&!/^(?:(?:itu|tersebut) )?(?:bukan|tidak|bukannya)\b/.test(tail);
+ });});
+ if(index===1){
+  return parts.some(function(t){
+   var food=has(t,FOOD);
+   var lost=positions(t,["hilang","kehilangan","tertinggal"]);
+   if(food&&lost.some(function(i){return !negated(t,i,7);}))return true;
+   var absence=positions(t,["tiada","ketiadaan"]);
+   if(food&&absence.some(function(i){return !negated(t,i,5);}))return true;
+   var ada=positions(t,["ada"]);
+   if(food&&ada.some(function(i){return negated(t,i,3)&&!t.slice(Math.max(0,i-4),i).includes("bukan");}))return true;
+   var takes=positions(t,TAKE),wrong=/\boleh (?:sang )?(?:arnab|kancil|monyet)\b/.test(t.join(" "));
+   return !wrong&&takes.some(function(i){return !negated(t,i,6)&&!wrongActor(t,i)&&(food||has(t,["musang"]));});
+  });
+ }
+ if(index===2){
+  var correct=parts.some(restriction);
+  var contrary=parts.some(function(t){return positions(t,REQUEST).some(function(i){
+   return !restriction(t)&&has(t.slice(Math.max(0,i-5),i),["terus","teruskan","sentiasa","hendaklah","mesti","patut","perlu","galakkan"]);
+  });});
+  return correct&&!contrary;
+ }
+ if(index===3){
+  return parts.some(function(t){
+   var returns=positions(t,RETURN).some(function(i){return !negated(t,i,6)&&!wrongActor(t,i);});
+   var apologies=positions(t,["maaf","kemaafan"]).some(function(i){return !negated(t,i,6)&&!wrongActor(t,i)&&(has(t,REQUEST)||t.length<=3||has(t,["memohon","meminta"]));});
+   return returns||apologies;
+  });
+ }
+ if(index===4){
+  var good=0,bad=0;
+  var normative=has(text.split(" "),["hendaklah","mesti","mestilah","patut","perlu","harus","boleh","sepatutnya"]);
+  parts.forEach(function(t){
+   var help=positions(t,["membantu","bantu","menolong","tolong","bertolongtolongan","bekerjasama","kerjasama"]);
+   help.forEach(function(i){if(negated(t,i,6))bad++;else good++;});
+   var care=positions(t,["menghargai","hargai","menghormati","hormati","menyayangi","sayangi","menjaga","jaga","mengutamakan"]);
+   if(has(t,FRIEND)||has(t,["barang","barangan","bekal","saling","sesama","orang"])){care.forEach(function(i){if(negated(t,i,6))bad++;else good++;});}
+   if(has(t,FRIEND)&&has(t,["berbuat","bersikap","berbaikbaik","baik"])){
+    positions(t,["baik","berbaikbaik"]).forEach(function(i){if(negated(t,i,6))bad++;else good++;});
+   }
+   positions(t,["berkongsi","kongsi"]).forEach(function(i){if(negated(t,i,6))bad++;else good++;});
+   positions(t,["menyusahkan","menyusahi","menyusahkan"]).forEach(function(i){if(has(t,FRIEND)){if(negated(t,i,6))good++;else bad++;}});
+   if(has(t,["barang","barangan","bekal","makanan"])){
+    positions(t,RETURN).forEach(function(i){if(negated(t,i,6))bad++;else good++;});
+   }
+   positions(t,["jujur","kejujuran","amanah"]).forEach(function(i){if(negated(t,i,6))bad++;else good++;});
+   if(has(t,["nasihat","nasihatnya"])){
+    positions(t,["mendengar","dengar","menerima","mengikut","mematuhi","ikut","didengar"]).forEach(function(i){
+     var neg=negated(t,i,6)||/\b(?:tidak|jangan) (?:perlu |patut )?didengar\b/.test(t.join(" "));
+     if(has(t,["buruk","jahat"])){if(neg)good++;else bad++;}else{if(neg)bad++;else good++;}
+    });
+   }
+   if(has(t,["izin","kebenaran"])){
+    positions(t,REQUEST).forEach(function(i){if(negated(t,i,6))bad++;else good++;});
+   }
+   positions(t,["mencuri","curi"]).forEach(function(i){if(negated(t,i,7))good++;else if(normative||t.length<8)bad++;});
+   if(has(t,["barang","barangan","bekal","makanan"])){
+    positions(t,["mengambil","ambil"]).forEach(function(i){
+     if(negated(t,i,7))good++;
+     else if(!has(t,["izin","kebenaran"])&&normative)bad++;
+     else if(has(t,["tanpa"])&&!has(t,REQUEST))bad++;
+    });
+   }
+   positions(t,["maaf","kemaafan"]).forEach(function(i){if(has(t,REQUEST)&&!negated(t,i,6))good++;});
+   if(restriction(t)&&!has(t,["maaf","kemaafan","izin","kebenaran"]))good++;
+  });
+  return good>0&&bad===0;
+ }
+ return false;
+}
+function freshAnswer(){return {text:"",status:"unchecked",checkedText:"",attempts:0,failures:0,exampleShown:false};}
+function freshState(){return {version:1,started:false,index:0,answers:Array.from({length:5},freshAnswer),audio:{music:true,muted:false,volume:45}};}
+function loadState(){
+ var base=freshState();try{var saved=JSON.parse(localStorage.getItem(STORAGE_KEY)||"null");if(!saved||saved.version!==1||!Array.isArray(saved.answers)||saved.answers.length!==5)return base;
+ base.started=!!saved.started;base.index=Math.min(4,Math.max(0,Number(saved.index)||0));
+ base.answers=saved.answers.map(function(a,i){var row=freshAnswer();if(!a||typeof a!=="object")return row;row.text=typeof a.text==="string"?a.text.slice(0,700):"";row.checkedText=typeof a.checkedText==="string"?a.checkedText.slice(0,700):"";row.attempts=Math.max(0,Math.min(10000,Number(a.attempts)||0));row.failures=Math.max(0,Math.min(10000,Number(a.failures)||0));row.exampleShown=!!a.exampleShown;if((a.status==="correct"||a.status==="wrong")&&row.text===row.checkedText&&row.attempts>0){row.status=gradeAnswer(i,row.text)?"correct":"wrong";}return row;});
+ if(saved.audio){base.audio.music=saved.audio.music!==false;base.audio.muted=!!saved.audio.muted;base.audio.volume=Math.max(0,Math.min(100,Number(saved.audio.volume)||0));}
+ }catch(e){}return base;
+}
+var state=loadState(),active=false,currentScreen="welcome",saveTimer=null;
+var $=function(id){return document.getElementById(id);};
+function save(){try{localStorage.setItem(STORAGE_KEY,JSON.stringify(state));}catch(e){}}
+function queueSave(){clearTimeout(saveTimer);saveTimer=setTimeout(save,180);}
+function escapeHTML(value){return String(value).replace(/[&<>"']/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c];});}
+function svg(id){return '<svg class="icon" aria-hidden="true"><use href="#'+id+'"/></svg>';}
+function countCorrect(){return state.answers.filter(function(a){return a.status==="correct"&&a.text===a.checkedText;}).length;}
+function showScreen(name){["welcome","quiz","summary"].forEach(function(id){$(id).hidden=id!==name;});currentScreen=name;updateJourney();}
+function updateJourney(){Array.from($("journey").children).forEach(function(li,i){var a=state.answers[i];li.className=(currentScreen==="quiz"&&i===state.index?"current":a.status==="correct"?"done":"");li.querySelector(".step-num").textContent=a.status==="correct"?"✓":String(i+1);if(currentScreen==="quiz"&&i===state.index)li.setAttribute("aria-current","step");else li.removeAttribute("aria-current");});}
+function focusQuestion(){requestAnimationFrame(function(){$("question-title").focus({preventScroll:true});if(window.innerWidth<761)$("quiz").scrollIntoView({block:"start",behavior:"auto"});});}
+function renderStory(){
+ var q=QUESTIONS[state.index];
+ $("reading-content").innerHTML=q.pages.map(function(n){
+  var p=BOOK[n-1],glossary=Object.keys(p.idioms);
+  var paragraphs=p.paragraphs.map(function(line){var html=escapeHTML(line);glossary.forEach(function(term){html=html.replace(term,"<strong>"+term+"</strong>");});return "<p>"+html+"</p>";}).join("");
+  var definitions=glossary.length?'<div class="glossary"><b>Simpulan bahasa</b><br>'+glossary.map(function(term){return escapeHTML(term)+" — "+escapeHTML(p.idioms[term])+".";}).join("<br>")+"</div>":"";
+  return '<article class="story-page"><div class="page-stamp">Muka surat '+n+' daripada 6</div><h3>'+escapeHTML(p.title)+"</h3>"+paragraphs+definitions+"</article>";
+ }).join("");
+}
+function setReading(open){
+ $("reading-panel").hidden=!open;$("read-toggle").setAttribute("aria-expanded",String(open));$("read-label").textContent=open?"Tutup Halaman Cerita":"Baca Halaman Cerita";
+ if(!open)$("reading-panel").scrollTop=0;
+}
+function renderQuiz(focus){
+ var q=QUESTIONS[state.index],a=state.answers[state.index];
+ $("question-index").textContent="Soalan "+(state.index+1)+" daripada 5";
+ $("question-title").textContent=q.text;
+ $("ref-label").textContent="Rujuk muka surat "+q.pages.join(" dan ");
+ $("ref-titles").textContent=q.pages.map(function(n){return BOOK[n-1].title;}).join(" · ");
+ $("progress").setAttribute("aria-valuenow",String(state.index+1));$("progress").setAttribute("aria-valuetext","Soalan "+(state.index+1)+" daripada 5");$("progress-fill").style.width=((state.index+1)/5*100)+"%";
+ $("answer-input").value=a.text;$("example-text").textContent=q.model;
+ $("next-label").textContent=state.index===4?"Lihat Keputusan":"Seterusnya";
+ renderStory();setReading(false);showScreen("quiz");renderFeedback();if(focus)focusQuestion();
+}
+function renderFeedback(){
+ var a=state.answers[state.index],q=QUESTIONS[state.index],status=a.status;
+ $("score-chip").textContent=countCorrect()+" daripada 5 tepat";
+ var visible=status==="correct"||status==="wrong"||status==="empty";
+ $("feedback").hidden=!visible;$("feedback").className="feedback "+status;
+ $("answer-input").setAttribute("aria-invalid",String(status==="wrong"||status==="empty"));
+ if(status==="correct"){$("feedback-icon").setAttribute("href","#i-check");$("feedback-title").textContent="Tahniah! Jawapan kamu betul.";$("feedback-detail").textContent="Bagus! Kamu telah memahami isi cerita.";}
+ if(status==="wrong"){$("feedback-icon").setAttribute("href","#i-retry");$("feedback-title").textContent="Jawapan kamu belum tepat. Baca semula muka surat yang dinyatakan dan cuba lagi!";$("feedback-detail").textContent="Petunjuk: "+q.hint;}
+ if(status==="empty"){$("feedback-icon").setAttribute("href","#i-pencil");$("feedback-title").textContent="Sila taip jawapan kamu dahulu.";$("feedback-detail").textContent="Kamu boleh membaca halaman cerita untuk mendapatkan panduan.";}
+ $("example-toggle").hidden=a.failures<2;
+ $("example-answer").hidden=!(a.exampleShown&&a.failures>=2);
+ $("example-toggle").textContent=a.exampleShown?"Tutup Contoh Jawapan":"Lihat Contoh Jawapan";
+ $("example-toggle").setAttribute("aria-expanded",String(a.exampleShown&&a.failures>=2));
+ var checked=(status==="correct"||status==="wrong")&&a.text===a.checkedText;
+ $("next-button").disabled=!checked;
+ $("nav-help").textContent=checked?(status==="wrong"?"Kamu boleh mencuba lagi atau meneruskan aktiviti.":"Sedia untuk meneruskan pengembaraan!"):"Semak jawapan untuk meneruskan aktiviti.";
+ updateJourney();
+}
+function revealFeedback(){
+ requestAnimationFrame(function(){
+  var box=$("feedback");
+  if(box.hidden||currentScreen!=="quiz")return;
+  try{box.focus({preventScroll:true});}catch(e){box.focus();}
+  try{box.scrollIntoView({block:"nearest",behavior:"auto"});}catch(e){box.scrollIntoView(false);}
+ });
+}
+function checkAnswer(event){
+ if(event&&typeof event.preventDefault==="function")event.preventDefault();
+ if(currentScreen!=="quiz")return false;
+ var answer=state.answers[state.index];
+ answer.text=$("answer-input").value;
+ if(!answer.text.trim()){
+  answer.status="empty";save();renderFeedback();revealFeedback();return false;
+ }
+ var correct=gradeAnswer(state.index,answer.text);
+ answer.attempts++;
+ answer.checkedText=answer.text;
+ answer.status=correct?"correct":"wrong";
+ if(!correct)answer.failures++;
+ save();
+ renderFeedback();
+ revealFeedback();
+ try{audio.feedback(correct?"correct":"wrong");}catch(error){audioUnavailable();}
+ return false;
+}
+function renderWelcome(){var any=state.started||state.answers.some(function(a){return a.text;});$("start-label").textContent=any?"Sambung Aktiviti":"Mula Aktiviti";$("reset-welcome").hidden=!any;showScreen("welcome");}
+function renderSummary(){
+ var correct=countCorrect();$("summary-count").textContent=String(correct);
+ $("summary-score-title").textContent=correct+" daripada 5 jawapan tepat";
+ $("summary-score-message").textContent=correct===5?"Hebat! Kamu memahami cerita dengan baik.":"Teruskan usaha! Kamu boleh membaca semula dan membaiki jawapan.";
+ $("answer-summary").innerHTML=state.answers.map(function(a,i){var good=a.status==="correct";return '<article class="summary-item"><div class="summary-item-head"><span>Soalan '+(i+1)+'</span><span class="status-tag'+(good?'':' try')+'">'+(good?"✓ Tepat":"↻ Cuba lagi")+'</span></div><p class="summary-student">'+escapeHTML(a.text||"Belum dijawab.")+"</p>"+(!good?'<p class="summary-model"><b>Contoh jawapan:</b> '+escapeHTML(QUESTIONS[i].model)+"</p>":"")+'<button type="button" class="summary-review" data-review="'+i+'">Semak soalan '+(i+1)+" semula</button></article>";}).join("");
+ showScreen("summary");save();requestAnimationFrame(function(){$("summary-title").focus({preventScroll:true});if(window.innerWidth<761)$("summary").scrollIntoView({block:"start",behavior:"auto"});});
+}
+function restart(){var pref=state.audio;state=freshState();state.audio=pref;state.started=true;state.index=0;active=true;save();renderQuiz(true);audio.sync();}
+function audioUnavailable(){$("audio-status").hidden=false;$("audio-status").textContent="Audio tidak tersedia pada pelayar ini. Kamu masih boleh meneruskan aktiviti.";}
+var audio={
+ ctx:null,master:null,musicGain:null,fxGain:null,timer:null,step:0,nextTime:0,nodes:new Set(),
+ ensure:function(){
+  try{if(!this.ctx){var C=window.AudioContext||window.webkitAudioContext;if(!C){audioUnavailable();return null;}this.ctx=new C();this.master=this.ctx.createGain();this.musicGain=this.ctx.createGain();this.fxGain=this.ctx.createGain();this.master.gain.value=state.audio.muted?0:state.audio.volume/100;this.musicGain.gain.value=.13;this.fxGain.gain.value=.55;this.musicGain.connect(this.master);this.fxGain.connect(this.master);this.master.connect(this.ctx.destination);}
+   if(this.ctx.state==="suspended")this.ctx.resume().catch(audioUnavailable);return this.ctx;
+  }catch(e){audioUnavailable();return null;}
+ },
+ tone:function(frequency,time,duration,level,channel,type){
+  var c=this.ctx;if(!c)return;var o=c.createOscillator(),g=c.createGain();o.type=type||"sine";o.frequency.setValueAtTime(frequency,time);g.gain.setValueAtTime(0,time);g.gain.linearRampToValueAtTime(level,time+.014);g.gain.exponentialRampToValueAtTime(.0001,time+duration);o.connect(g);g.connect(channel);o.start(time);o.stop(time+duration+.025);
+  var tracked=channel===this.musicGain,that=this;if(tracked)this.nodes.add(o);o.onended=function(){o.disconnect();g.disconnect();if(tracked)that.nodes.delete(o);};
+ },
+ startMusic:function(){
+  if(this.timer||!this.ctx)return;this.step=0;this.nextTime=this.ctx.currentTime+.06;this.musicGain.gain.cancelScheduledValues(this.ctx.currentTime);this.musicGain.gain.setTargetAtTime(.13,this.ctx.currentTime,.06);
+  var that=this;this.timer=setInterval(function(){that.schedule();},100);this.schedule();
+ },
+ schedule:function(){
+  if(!this.ctx||this.ctx.state!=="running")return;
+  var melody=[72,null,76,79,76,null,74,72,69,null,72,76,74,null,72,null,76,null,79,81,79,null,76,74,72,null,69,67,69,null,72,null];
+  var bass=[48,53,45,55],c=this.ctx;
+  if(this.nextTime<c.currentTime-.5)this.nextTime=c.currentTime+.03;
+  while(this.nextTime<c.currentTime+.24){
+   var i=this.step%32,n=melody[i],t=this.nextTime;
+   if(n!==null){var freq=440*Math.pow(2,(n-69)/12);this.tone(freq,t,.9,.29,this.musicGain,"sine");this.tone(freq*2,t,.42,.045,this.musicGain,"sine");}
+   if(i%8===0){var root=bass[Math.floor(i/8)];this.tone(440*Math.pow(2,(root-69)/12),t,2.2,.22,this.musicGain,"sine");this.tone(440*Math.pow(2,(root+7-69)/12),t+.04,1.7,.09,this.musicGain,"triangle");}
+   this.step++;this.nextTime+=.43;
+  }
+ },
+ stopMusic:function(){if(this.timer){clearInterval(this.timer);this.timer=null;}if(this.ctx&&this.musicGain){this.musicGain.gain.cancelScheduledValues(this.ctx.currentTime);this.musicGain.gain.setTargetAtTime(.0001,this.ctx.currentTime,.035);var pending=Array.from(this.nodes);this.nodes.clear();pending.forEach(function(o){try{o.stop();}catch(e){}});}},
+ sync:function(){
+  updateAudioUI();if(!active)return;var c=this.ensure();if(!c)return;
+  this.master.gain.setTargetAtTime(state.audio.muted?0:state.audio.volume/100,c.currentTime,.03);
+  if(state.audio.music&&!state.audio.muted&&!document.hidden)this.startMusic();else this.stopMusic();
+ },
+ feedback:function(kind){
+  if(state.audio.muted||state.audio.volume===0)return;var c=this.ensure();if(!c)return;var t=c.currentTime+.02;
+  if(this.musicGain){this.musicGain.gain.cancelScheduledValues(t);this.musicGain.gain.setTargetAtTime(.025,t,.03);if(state.audio.music)this.musicGain.gain.setTargetAtTime(.13,t+.65,.12);}
+  if(kind==="correct"){this.tone(659.25,t,.38,.32,this.fxGain);this.tone(880,t+.11,.5,.28,this.fxGain);this.tone(1318.5,t+.19,.42,.12,this.fxGain);}
+  else{this.tone(329.63,t,.22,.2,this.fxGain);this.tone(293.66,t+.14,.28,.16,this.fxGain);}
+ }
+};
+function updateAudioUI(){
+ $("music-button").setAttribute("aria-pressed",String(state.audio.music));$("music-label").textContent=state.audio.music?"Muzik hidup":"Muzik mati";
+ $("mute-button").setAttribute("aria-pressed",String(state.audio.muted));$("mute-label").textContent=state.audio.muted?"Buka bunyi":"Senyapkan";$("mute-icon").setAttribute("href",state.audio.muted?"#i-mute":"#i-volume");
+ $("volume").value=String(state.audio.volume);$("volume").setAttribute("aria-valuetext",state.audio.volume+" peratus");
+}
+$("start-button").addEventListener("click",function(){active=true;state.started=true;save();renderQuiz(true);try{audio.sync();}catch(error){audioUnavailable();}});
+$("reset-welcome").addEventListener("click",restart);
+$("read-toggle").addEventListener("click",function(){setReading($("reading-panel").hidden);});
+$("close-reading").addEventListener("click",function(){setReading(false);$("read-toggle").focus({preventScroll:true});});
+$("answer-input").addEventListener("input",function(){var a=state.answers[state.index];a.text=$("answer-input").value;a.status="unchecked";renderFeedback();queueSave();});
+$("check-button").addEventListener("click",checkAnswer);
+$("answer-form").addEventListener("submit",checkAnswer);
+$("example-toggle").addEventListener("click",function(){var a=state.answers[state.index];if(a.failures<2)return;a.exampleShown=!a.exampleShown;save();renderFeedback();});
+$("back-button").addEventListener("click",function(){save();if(state.index===0)renderWelcome();else{state.index--;save();renderQuiz(true);}});
+$("next-button").addEventListener("click",function(){var a=state.answers[state.index];if(!["correct","wrong"].includes(a.status)||a.text!==a.checkedText)return;save();if(state.index<4){state.index++;save();renderQuiz(true);}else{var missing=state.answers.findIndex(function(x){return !["correct","wrong"].includes(x.status)||x.text!==x.checkedText;});if(missing>=0){state.index=missing;renderQuiz(true);}else renderSummary();}});
+$("retry-button").addEventListener("click",restart);
+$("review-button").addEventListener("click",function(){var first=state.answers.findIndex(function(a){return a.status!=="correct";});state.index=first<0?0:first;save();renderQuiz(true);});
+$("answer-summary").addEventListener("click",function(e){var button=e.target.closest("[data-review]");if(!button)return;state.index=Number(button.dataset.review);save();renderQuiz(true);});
+$("music-button").addEventListener("click",function(){state.audio.music=!state.audio.music;save();audio.sync();});
+$("mute-button").addEventListener("click",function(){state.audio.muted=!state.audio.muted;save();audio.sync();});
+$("volume").addEventListener("input",function(){state.audio.volume=Number(this.value);queueSave();audio.sync();});
+document.addEventListener("keydown",function(e){if(e.key==="Escape"&&currentScreen==="quiz"&&!$("reading-panel").hidden){setReading(false);$("read-toggle").focus({preventScroll:true});}if((e.ctrlKey||e.metaKey)&&e.key==="Enter"&&currentScreen==="quiz"){checkAnswer(e);}});
+document.addEventListener("visibilitychange",function(){if(document.hidden){audio.stopMusic();save();}else if(active)audio.sync();});
+window.addEventListener("pagehide",function(){save();audio.stopMusic();});
+window.JomCerita=Object.freeze({gradeAnswer:gradeAnswer,normalize:normalize,version:"1.1.0",source:SOURCE});
+updateAudioUI();renderWelcome();
+})();
+</script>
+</body>
+</html>
